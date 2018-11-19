@@ -12,9 +12,9 @@
         
         <!-- Modal body -->
         <div class="modal-body">
-          <img class="img-fluid img-responsive rounded slide-photo" src="" />
+          <img class="img-fluid img-responsive rounded slide-photo" src="{{$data['mainTitle']}}" />
       <br>
-      <h5>{{$data['mainTitle']}}</h5>
+      <h5>{{$data['mainContent']}}</h5>
         </div>
         
         <!-- Modal footer -->

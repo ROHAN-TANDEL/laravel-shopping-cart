@@ -107,7 +107,7 @@
 </div>
 </div>
 <?php $data=[
-        'mainTitle' => "404, page not found",
+        'mainTitle' => "img/photo1.jpg",
         'mainContent' => "sorry, but the requested page does not exist :("
     ]  ?>
 @include('buymodal', $data)
