@@ -96,5 +96,6 @@
             @include('home_slider')
             @include('product')
         </div>
+        @include('footer')
     </body>
 </html>

@@ -31,6 +31,7 @@ $(document).ready(function(){
 		  fade: true,
 		  autoplay: true,
 		  speed: 100,
+		  dots:true
 		});
   	 });
 </script>
