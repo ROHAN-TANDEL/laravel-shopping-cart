@@ -11,7 +11,7 @@
 			<h6>total details of it</h6>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
+				<a href="" class="alert" data-toggle="modal" data-target="#myModal">Buy</a>
 			</div>
 		</div>
 		<div class="text-center product-details">
@@ -106,6 +106,13 @@
 </div>
 </div>
 </div>
+<?php $data=[
+        'mainTitle' => "404, page not found",
+        'mainContent' => "sorry, but the requested page does not exist :("
+    ]  ?>
+@include('buymodal', $data)
+
+<!-- @include('buymodal',['imagica' => "img/photo1.jpg", 'name' => "total details of it"]) -->
 <style type="text/css">
 
 .product-details:hover > .add-buy {
