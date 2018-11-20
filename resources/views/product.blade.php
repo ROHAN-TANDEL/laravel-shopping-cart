@@ -2,7 +2,7 @@
 <div class="panel position-static shadow p-3 mx-2 my-3 bg-white rounded" style="box-shadow: 1px 1px 12px grey; background-color: grey;">
 <h3>Ethenic Cloths</h3>
 <div class="col-md-12 mt-25 position-static" style="margin-top: 25px;">
-	<div class="blue">
+	<div class="{{$violet}}">
 		<div class="text-center product-details position-static">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
 			<br>
@@ -108,11 +108,10 @@
 </div>
 <?php $data=[
         'mainTitle' => "img/photo1.jpg",
-        'mainContent' => "sorry, but the requested page does not exist :("
+        'mainContent' => "total details of it"
     ]  ?>
 @include('buymodal', $data)
 
-<!-- @include('buymodal',['imagica' => "img/photo1.jpg", 'name' => "total details of it"]) -->
 <style type="text/css">
 
 .product-details:hover > .add-buy {
@@ -138,12 +137,12 @@
 	/*transform: scale(1.3);*/
 }
 .slick-next{right:0;}.slick-prev{left:0;z-index:1;}
-.blue img {
+.{{$violet}} img {
 	padding: 3% 3% 0% 3%;
 	/*transform: matrix(1, 0, -0.099192, 1.2, -2, 0);*/
 
 }
-.blue img:hover  {
+.{{$violet}} img:hover  {
 	padding: 0;
 	position: relative;
 	z-index: 1;
@@ -158,7 +157,7 @@
 
 <script type="text/javascript">
 
-$('.blue').slick({
+$('.{{$violet}}').slick({
   infinite: false,
   slidesToShow: 6,
   slidesToScroll: 1,
