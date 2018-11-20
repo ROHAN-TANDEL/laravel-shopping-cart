@@ -99,7 +99,10 @@
                 </div>
             @endif -->
             @include('home_slider')
-            @include('product')
+            @include('product', ["violet"=>"blue"] )
+            @include('product', ["violet"=>"red"] )
+            @include('product', ["violet"=>"violet"] )
+
         </div>
         @include('footer')
     </body>
