@@ -82,6 +82,11 @@
     </head>
     <body>
         @include('header')
+        @include('primary_header')
+        <div style="display: none">
+            
+        @include('header')
+        </div>
         <div class="fluid-container"> <!-- class="flex-center position-ref full-height"> -->
  <!--            @if (Route::has('login'))
                 <div class="top-right links">

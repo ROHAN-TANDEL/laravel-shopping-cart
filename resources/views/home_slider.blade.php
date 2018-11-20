@@ -1,17 +1,15 @@
 <div class="one-time col-md-12">
 	<div class="slider">
-  <div>
-    <img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-  </div>
-  <div>
-    <img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" />
-  </div>
-  <div>
-    <img class="img-fluid img-responsive rounded slide-photo" src="img/eyewear.jpeg" />
-  </div>
-</div>
-
-	
+	  <div>
+	    <img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
+	  </div>
+	  <div>
+	    <img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" />
+	  </div>
+	  <div>
+	    <img class="img-fluid img-responsive rounded slide-photo" src="img/eyewear.jpeg" />
+	  </div>
+	</div>
 </div>
 <style type="text/css">
 .slide-photo {
