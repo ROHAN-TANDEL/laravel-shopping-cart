@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark sticky-top">
+<nav class="navbar navbar-expand-sm bg-light sticky-top">
   <!-- Brand -->
   <a class="navbar-brand" href="#">Siaist</a>
 
