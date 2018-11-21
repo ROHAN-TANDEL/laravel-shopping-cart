@@ -15,13 +15,21 @@
           <img class="img-fluid img-responsive rounded slide-photo" src="{{$data['mainTitle']}}" />
       <br>
       <h5>{{$data['mainContent']}}</h5>
+      <form action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <input type="hidden" name="cmd" value="_s-xclick">
+      <input type="hidden" name="hosted_button_id" value="UY6TK2WF9P6NG">
+      <input type="image" src="https://www.sandbox.paypal.com/en_GB/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal – The safer, easier way to pay online!">
+      <img alt="" border="0" src="https://www.sandbox.paypal.com/en_GB/i/scr/pixel.gif" width="1" height="1">
+      </form>
+
+
           <form class="container text-center col-md-4 " method="POST" id="payment-form"  action="/payment/add-funds/paypal">
             {{ csrf_field() }}
             <h2 class="w3-text-blue">Payment Form</h2>
             <p>Pay Money</p>
             <p>      
             <label class="w3-text-blue"><b>Enter Amount</b></label>
-            <input class="w3-input w3-border" name="amount" type="text"></p>      
+            <input class="w3-input w3-border" name="amount" type="text" value="2"></p>      
             <button class="w3-btn w3-blue">Pay with PayPal</button></p>
           </form>
         </div>
