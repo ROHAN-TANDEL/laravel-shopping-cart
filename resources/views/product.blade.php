@@ -4,11 +4,9 @@
 <div class="col-md-12 mt-25 position-static" style="margin-top: 25px;">
 	<div class="{{$violet}}">
 		<div class="text-center product-details position-static">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" />
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert" data-toggle="modal" data-target="#myModal">Buy</a>
@@ -16,10 +14,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -27,10 +23,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -38,10 +32,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -49,10 +41,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -60,10 +50,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -71,10 +59,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -82,10 +68,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 invisible add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -93,10 +77,8 @@
 		</div>
 		<div class="text-center product-details">
 			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-			<br>
-			<h5>total details of it</h5>
-			<h6>total details of it</h6>
-			<h6>total details of it</h6>
+
+			<p>total details of it<br>total details of it<br>total details of it</p>
 			<div class="col-md-12 add-buy">
 				<a href="" class="alert">Add</a>
 				<a href="" class="alert">Buy</a>
@@ -119,11 +101,11 @@
 	color: grey;
 	font-weight: 600;
 }
-.product-details h5 {
+.product-details p {
 	color: green;
 	font-weight: 600;
 }
-.product-details h6 {
+.product-details p {
 	color: brown;
 	font-weight: 600;
 } 
