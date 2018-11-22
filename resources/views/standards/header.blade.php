@@ -11,6 +11,7 @@
         @endsection
 
         @yield('after_header')
+        
 
 @endsection
 

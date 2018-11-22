@@ -81,7 +81,7 @@
         </style>
     </head>
     <body>
-        <main class="py-4">
+        <main class="py-4 body-outline">
         @yield('body')
         </main>
     </body>
