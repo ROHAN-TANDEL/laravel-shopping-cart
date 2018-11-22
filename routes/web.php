@@ -28,3 +28,7 @@ Route::post('payment/add-funds/paypal', 'PaymentController@payWithpaypal');
 
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
+
+Route::get('checkout',function(){
+	return view('checkout');
+});
