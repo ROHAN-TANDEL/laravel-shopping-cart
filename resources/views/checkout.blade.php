@@ -116,7 +116,7 @@
                             </div>
                           </div>
                         </div>
-                        <button class="btn btn-primary" type="submit">Submit form</button>
+                        <button class="btn btn-primary" type="submit">Save & Submit</button>
                       </form>
                 </div>
               </div>
@@ -136,7 +136,13 @@
                       <img  class="col-md-12 img img-responsive" src="img/photo1.jpg">
                     </div>
                     <div class="col-md-5">
-                      
+                      <div class="card" style="width: 18rem;">
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">Cras justo odio</li>
+                          <li class="list-group-item">Dapibus ac facilisis in</li>
+                          <li class="list-group-item">Vestibulum at eros</li>
+                        </ul>
+                      </div>
                     </div>
                     <div class="col-md-3">
                       <small>Devilvered by 12/12 ( free Shipping)</small>
