@@ -32,3 +32,7 @@ Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMon
 Route::get('checkout',function(){
 	return view('checkout');
 });
+
+Route::get('sample',function(){
+	return view('sample');
+});

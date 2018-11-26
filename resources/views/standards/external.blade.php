@@ -6,7 +6,7 @@
 
 @section('body')
 	
-	@include('standards.body')
+		@include('standards.body')
 
 		@yield('body_content')
 

@@ -2,89 +2,7 @@
 <div class="panel position-static shadow p-3 mx-2 my-3 bg-white rounded" style="box-shadow: 1px 1px 12px grey; background-color: grey;">
 <h3>Ethenic Cloths</h3>
 <div class="col-md-12 mt-25 position-static" style="margin-top: 25px;">
-	<div class="{{$violet}}">
-		<div class="text-center product-details position-static">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert" data-toggle="modal" data-target="#myModal">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 invisible add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-		<div class="text-center product-details">
-			<img class="img-fluid img-responsive rounded slide-photo" src="img/photo1.jpg" />
-
-			<p>total details of it<br>total details of it<br>total details of it</p>
-			<div class="col-md-12 add-buy">
-				<a href="" class="alert">Add</a>
-				<a href="" class="alert">Buy</a>
-			</div>
-		</div>
-	</div>
+	<div class="{{$violet}}"></div>
 </div>
 </div>
 </div>
@@ -106,7 +24,7 @@
 	font-weight: 600;
 }
 .product-details p {
-	color: brown;
+	color: #008a8f;
 	font-weight: 600;
 } 
 .product-details:hover {
@@ -139,10 +57,28 @@
 
 <script type="text/javascript">
 
+$.ajax({
+   url: "/products",
+   dataType: "json",
+   async: false,
+   cache:true,
+   contentType: "application/json",
+   success: function( response ) {
+   	for (var i = response.length - 1; i >= 0; i--) {
+   		// response[i];
+   		let slider_window ='<div class="text-center product-details"> <img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" /> <p>'+response[i]['name']+'<br>'+response[i]['category']+'<br>'+response[i]['unit_price']+'</p> <div class="col-md-12 add-buy"> <a href="" class="alert">Add</a> <a href="" class="alert" data-toggle="modal" data-target="#myModal" data-values="'+response[i]+'">Buy</a> </div> </div>';
+       
+       console.log( response[i]['name'] );
+       $('.{{$violet}}').append(slider_window);
+   	}
+   }
+});
+
 $('.{{$violet}}').slick({
   infinite: false,
   slidesToShow: 6,
   slidesToScroll: 1,
   lazyLoad: 'ondemand',
 });
+
 </script>

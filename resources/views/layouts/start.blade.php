@@ -19,9 +19,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    @yield('external_files')
 </head>
 <body>
-    
+
         <main class="py-4">
             @yield('content')
         </main>

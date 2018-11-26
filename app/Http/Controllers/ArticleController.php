@@ -105,6 +105,7 @@ class ArticleController extends Controller
         // localhost:8000/api/article/1
         // dd($article);
         Log::emergency('calling from show');
+        
         return array(Article::find($article->id));
     }
 
