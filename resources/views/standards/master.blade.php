@@ -13,6 +13,7 @@
         <!-- Styles -->
         <style>
             html {
+                -webkit-tap-highlight-color: transparent;
                 overflow: scroll;
                 overflow-x: hidden;
             }

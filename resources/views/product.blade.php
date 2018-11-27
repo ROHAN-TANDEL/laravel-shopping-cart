@@ -66,9 +66,11 @@ $.ajax({
    success: function( response ) {
    	for (var i = response.length - 1; i >= 0; i--) {
    		// response[i];
-   		let slider_window ='<div class="text-center product-details"> <img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" /> <p>'+response[i]['name']+'<br>'+response[i]['category']+'<br>'+response[i]['unit_price']+'</p> <div class="col-md-12 add-buy"> <a href="" class="alert">Add</a> <a href="" class="alert" data-toggle="modal" data-target="#myModal" data-values="'+response[i]+'">Buy</a> </div> </div>';
+   		
+   		let slider_window ='<div class="text-center product-details"> <img class="img-fluid img-responsive rounded slide-photo" src="img/photo2.jpg" /> <p>'+response[i]['name']+'<br>'+response[i]['category']+'<br>'+response[i]['unit_price']+'</p> <div class="col-md-12 add-buy"> <a href="" class="alert">Add</a> <a href="" class="alert" data-toggle="modal" data-target="#myModal" data-values='+"'"+JSON.stringify(response[i])+"'"+'>Buy</a> </div> </div>';
        
-       console.log( response[i]['name'] );
+
+       console.log( response[i] );
        $('.{{$violet}}').append(slider_window);
    	}
    }
