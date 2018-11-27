@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Orders extends Model
+class Order extends Model
 {
 	protected $fillable = [
 	            'reference_id',

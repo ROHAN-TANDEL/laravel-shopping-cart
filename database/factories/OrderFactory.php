@@ -3,7 +3,7 @@
 use Faker\Generator as Faker;
 
 
-$factory->define(App\Orders::class, function (Faker $faker) {
+$factory->define(App\Order::class, function (Faker $faker) {
     return [
 
         'reference_id'=>rand(1,100),

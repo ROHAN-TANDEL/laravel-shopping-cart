@@ -6,6 +6,9 @@
        <div class="row"> 
         <div class="col-md-8">
           <div class="accordion" id="product-checkout">
+            @if (Route::has('login'))
+            @auth
+            @else
             <div class="card">
               <div class="card-header" id="heading-login">
                 <h5 class="mb-0">
@@ -17,15 +20,18 @@
 
               <div id="checkout-login" class="collapse show" aria-labelledby="heading-login" data-parent="#product-checkout">
                 <div class="card-body">
-                  <form>
+                  <form method="POST" action="{{ route('login') }}">
+                    @csrf
                       <div class="form-group">
                         <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                        
+                        <input id="email" type="email" class="form-control{{ $errors->has('email') ? ' is-invalid' : '' }}" name="email" value="{{ old('email') }}" placeholder="Enter email" required autofocus>
+
                         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                       </div>
                       <div class="form-group">
                         <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+                        <input id="password" type="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}" name="password" placeholder="Password" required>
                       </div>
                       <div class="form-group form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
@@ -36,6 +42,8 @@
                 </div>
               </div>
             </div>
+            @endauth
+            @endif
             <div class="card">
               <div class="card-header" id="heading-address">
                 <h5 class="mb-0">
@@ -46,7 +54,8 @@
               </div>
               <div id="checkout-address" class="collapse" aria-labelledby="heading-address" data-parent="#product-checkout">
                 <div class="card-body position-relative">
-                      <button type="submit" class="btn btn-primary">Use My Current Location</button>
+                      <button type="submit" class="btn btn-primary" onclick="getLocation()">Use My Current Location</button>
+                      <p id="demo"></p>
                       <form class="needs-validation" novalidate>
                         <div class="form-row">
                           <div class="col-md-4 mb-3">
@@ -198,5 +207,21 @@
               padding: 2%;
             }
           </style>
+          <script type="text/javascript">
+              var x = document.getElementById("demo");
+
+              function getLocation() {
+                  if (navigator.geolocation) {
+                      navigator.geolocation.getCurrentPosition(showPosition);
+                  } else { 
+                      x.innerHTML = "Geolocation is not supported by this browser.";
+                  }
+              }
+
+              function showPosition(position) {
+                  x.innerHTML = "Latitude: " + position.coords.latitude + 
+                  "<br>Longitude: " + position.coords.longitude;
+              }
+          </script>
         @endsection
 @endsection

@@ -17,7 +17,7 @@
 header("Access-Control-Allow-Origin: http://localhost:8100");
 	header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE, PATCH");
 	header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
-	
+
 
 Route::get('/', function () { return view('welcome'); });
 
@@ -36,8 +36,13 @@ Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMon
 
 Route::get('checkout',function(){
 	return view('checkout');
-});
+})->name('checkout');
 
 Route::get('sample',function(){
 	return view('sample');
 });
+
+
+Route::resource('article', 'ArticleController');
+
+Route::resource('product','ProductsController');

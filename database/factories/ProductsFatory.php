@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Products::class, function (Faker $faker) {
+$factory->define(App\Product::class, function (Faker $faker) {
     return [
         'name' => $faker->name,
         'quantity' => rand(1,100),

@@ -4,7 +4,13 @@ namespace App\Http\Controllers;
 
 use App\Products;
 
+use App\Products;
+
 use Illuminate\Http\Request;
+
+use Illuminate\Support\Facades\Redis;
+
+use Log;
 
 class ProductsController extends Controller
 {
@@ -16,7 +22,11 @@ class ProductsController extends Controller
     public function index()
     {
         //
-        return Products::all();
+        $all_products = Products::all();
+        Redis::set('products', $all_products);
+        $cache_products = Redis::get('products');
+        return $cache_products;
+        
     }
 
     /**
@@ -51,7 +61,7 @@ class ProductsController extends Controller
     public function show(Products $product)
     {   
         //method: GET
-        // localhost:8000/api/product/1
+        // localhost:8000/api/product/1 
         // dd($article);
         // dd($product->id);
         return Products::find($product->id);

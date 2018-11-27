@@ -115,3 +115,4 @@ class PaymentController extends Controller
         return Redirect::to('/');
     }
 }
+	

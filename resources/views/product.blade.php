@@ -8,7 +8,7 @@
 </div>
 <?php $data=[
         'mainTitle' => "img/photo1.jpg",
-        'mainContent' => "total details of it"
+        'mainContent' => "Exclusive Trends"
     ]  ?>
 @include('buymodal', $data)
 
