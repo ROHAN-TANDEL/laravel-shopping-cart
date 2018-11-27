@@ -30,11 +30,11 @@
 .product-details:hover {
 	box-shadow: 0px 0px 10px white;
 	border-radius: 2%;
+	/*margin:2% 0;*/
 	position: relative;
-	box-shadow: 0px 0px 12px 2px #58585833;
 	z-index: 12;
-	margin:2% 0;
-	/*transform: scale(1.3);*/
+	box-shadow: 0px 0px 12px 2px #58585833;
+	transform: scale(1.1);
 }
 .slick-next{right:0;}.slick-prev{left:0;z-index:1;}
 .{{$violet}} img {
@@ -58,7 +58,7 @@
 <script type="text/javascript">
 
 $.ajax({
-   url: "/products",
+   url: "api/product",
    dataType: "json",
    async: false,
    cache:true,

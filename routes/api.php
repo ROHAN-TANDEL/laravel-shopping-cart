@@ -13,14 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-// if($_SERVER['REQUEST_METHOD']=='OPTIONS') {
+if($_SERVER['REQUEST_METHOD']=='OPTIONS') {
 	
 	// Log::debug('server hit');
 	header("Access-Control-Allow-Origin: http://localhost:8100");
 	header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE, PATCH");
 	header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
 
-// }
+}
 
 header("Access-Control-Allow-Origin: http://localhost:8100");
 header("Access-Control-Allow-Credentials: true");

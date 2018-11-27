@@ -14,6 +14,11 @@
 //header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
 //Route::resource('article', 'ArticleController');
 
+header("Access-Control-Allow-Origin: http://localhost:8100");
+	header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE, PATCH");
+	header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
+	
+
 Route::get('/', function () { return view('welcome'); });
 
 Auth::routes();
