@@ -34,16 +34,25 @@ Route::post('payment/add-funds/paypal', 'PaymentController@payWithpaypal');
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
 
-Route::redirect('checkout','checkout/address')->name('checkout');
 
 Route::get('sample',function(){
 	return view('sample');
 });
 
-Route::resource('checkout/login', 'CheckoutController@signIn')->name('signIn','signin');
+Route::redirect('checkout','checkout/address')->name('checkout');
 
-Route::resource('checkout/address', 'CheckoutController')->name('index','address');
+Route::get('checkout/address', 'CheckoutController@index')->name('address');
+
+Route::get('checkout/login', 'CheckoutController@signIn')->name('signin');
+
 
 Route::resource('article', 'ArticleController');
 
 Route::resource('product','ProductController');
+
+
+
+
+
+
+

@@ -8,6 +8,8 @@
 
         @section('product')
             @include('product', ["violet"=>"blue"] )
+            <!-- @include('product', ["violet"=>"red"] ) -->
+            <!-- @include('product', ["violet"=>"violet"] ) -->
         @endsection
 
         @section('footer')

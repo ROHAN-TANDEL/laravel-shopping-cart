@@ -23,7 +23,7 @@ class ProductController extends Controller
     {
         //
         
-        /*Address::chunk(1, function ($addresses) {
+            /*Address::chunk(1, function ($addresses) {
             $i = 1;
             Log::emergency("called ".$i);
             foreach ($addresses as $address) {
