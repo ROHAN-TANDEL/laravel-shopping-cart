@@ -14,9 +14,9 @@
 //header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
 //Route::resource('article', 'ArticleController');
 
-header("Access-Control-Allow-Origin: http://localhost:8100");
-	header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE, PATCH");
-	header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
+// header("Access-Control-Allow-Origin: http://localhost:8100");
+// 	header("Access-Control-Allow-Methods: PUT, POST, GET, OPTIONS, DELETE, PATCH");
+// 	header("Access-Control-Allow-Headers: X-Requested-With, Content-Type, Origin, Cache-Control, Pragma, Authorization, Accept, Accept-Encoding");
 
 
 Route::get('/', function () { return view('welcome'); });
@@ -34,15 +34,16 @@ Route::post('payment/add-funds/paypal', 'PaymentController@payWithpaypal');
 Route::get('addmoney/stripe', array('as' => 'addmoney.paywithstripe','uses' => 'AddMoneyController@payWithStripe'));
 Route::post('addmoney/stripe', array('as' => 'addmoney.stripe','uses' => 'AddMoneyController@postPaymentWithStripe'));
 
-Route::get('checkout',function(){
-	return view('checkout');
-})->name('checkout');
+Route::redirect('checkout','checkout/address')->name('checkout');
 
 Route::get('sample',function(){
 	return view('sample');
 });
 
+Route::resource('checkout/login', 'CheckoutController@signIn')->name('signIn','signin');
+
+Route::resource('checkout/address', 'CheckoutController')->name('index','address');
 
 Route::resource('article', 'ArticleController');
 
-Route::resource('product','ProductsController');
+Route::resource('product','ProductController');

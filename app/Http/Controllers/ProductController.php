@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Products;
+use App\Product;
 
-use App\Products;
+use App\Address;
 
 use Illuminate\Http\Request;
 
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Redis;
 
 use Log;
 
-class ProductsController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -22,7 +22,18 @@ class ProductsController extends Controller
     public function index()
     {
         //
-        $all_products = Products::all();
+        
+        /*Address::chunk(1, function ($addresses) {
+            $i = 1;
+            Log::emergency("called ".$i);
+            foreach ($addresses as $address) {
+                Log::emergency(++$i);
+                Log::emergency($address);
+            }
+        });*/
+
+
+        $all_products = Product::all();
         Redis::set('products', $all_products);
         $cache_products = Redis::get('products');
         return $cache_products;
@@ -47,7 +58,7 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        $products=Products::create($request->all());
+        $products=Product::create($request->all());
         // dd($products);
         return response()->json($products, 201);
     }
@@ -58,13 +69,13 @@ class ProductsController extends Controller
      * @param  \App\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function show(Products $product)
+    public function show(Product $product)
     {   
         //method: GET
         // localhost:8000/api/product/1 
         // dd($article);
         // dd($product->id);
-        return Products::find($product->id);
+        return Product::find($product->id);
     }
 
     /**
@@ -73,7 +84,7 @@ class ProductsController extends Controller
      * @param  \App\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function edit(Products $products)
+    public function edit(Product $products)
     {
         //
     }
@@ -85,10 +96,10 @@ class ProductsController extends Controller
      * @param  \App\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Products $products)
+    public function update(Request $request, Product $products)
     {
         Log::emergency('calling from update');
-        $products = products::findOrFail($products->id);
+        $products = product::findOrFail($products->id);
         $products->update($products->all());
         return self::show($products);
     }
@@ -99,10 +110,10 @@ class ProductsController extends Controller
      * @param  \App\Products  $products
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Products $products)
+    public function destroy(Product $products)
     {
         Log::emergency('calling from destroy');
-        $products = Article::findOrFail($products->id);
+        $products = Product::findOrFail($products->id);
         $products->delete();
 
         return response()->json("deleted ".$products->id, 204);
